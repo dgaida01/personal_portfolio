@@ -6,31 +6,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
 
-    <style>
-        th {
+        .btmrow {
+            border-bottom: 0px;
+        }
+
+        th,
+        td {
 
             border-right: 1px solid black;
             /*border-left: 1px solid black;*/
             border-bottom: 1px solid black;
-         
-
         }
 
-        td {
-        border: 1px solid black;
-        
+        td:last-child,
+        th:last-child {
+            border-right: 0px;
         }
 
-        table {
-            border-collapse: collapse;
-        }  
-        
-        .emessage{
-          border-color: red;
-          border-style: solid;          
-               }
-    </style>
+#msglbl{
+    
+    
+    display: inline-block;
+    box-sizing: border-box;
+    padding-top:10px;
+    height: 40px;
+    width: 60px;
+    vertical-align: top;
+    margin-right:0;
+
+
+}
+textarea[name="emessage"]{
+    height: 100px;
+    width: 300px;
+    display:inline-block;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-left:0;
+
+}
+
+button[type="submit"]{
+    margin: 2rem;
+  background-color:grey;
+}
+
+
+.spacer{
+    height: 20px;
+}
+
+ </style>
 </head>
 
 
@@ -71,32 +103,35 @@
             <td>OOP</td>
         </tr>
         <tr>
-            <td>Bootstrap</td>
-            <td>Unittest</td>
-            <td>React</td>
-            <td></td>
-            <td>Rest</td>
+            <td class="btmrow">Bootstrap</td>
+            <td class="btmrow">Unittest</td>
+            <td class="btmrow">React</td>
+            <td class="btmrow"></td>
+            <td class="btmrow">Rest</td>
         </tr>
     </table>
     <h2><strong>Social Snakes</strong></h2>
     <p>Social Media App made in Python - <a href="">code</a> | <a href="">deployed</a></p>
     <h2><strong>Contact Me</strong></h2>
     <form>
-    <div>
-        <label for="name">Name:</label>
-        <input type="text" name="name" id="name">
-        <label for="email">Email:</label>
-        <input type="email" name="email" id="email">
-    </div>
-    <label for="emessage">Message:</label>
-    <textarea name="emessage" cols="20" rows="3"></textarea>
-    <div>
-    <button type="submit">Send Message</button>
-    </div>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email">
+        </div>
+      <div class="spacer"></div>
+            <label for="emessage" id="msglbl">Message:</label>        
+            <textarea name="emessage" ></textarea> 
+     
+
+        <div>
+            <button type="submit">Send Message</button>
+        </div>
     </form>
-    
-    
- 
+
+
+
 
 </body>
 
